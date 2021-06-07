@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">                                    
+    <title>Eid Mubarak parallax website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Eid-al-Fitr</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" alt="" id="stars">
+        <img src="images/stars2.png" alt="" id="stars2">
+        <img src="images/moon.png" alt="" id="moon">
+        <h2 id="text">Eid Mubarak</h2>
+        <img src="images/rock.png" alt="" id="rock">
+        <img src="images/masjid.png" alt="" id="masjid">
+        <img src="images/bottom.png" alt="" id="bottom">
+        <img src="images/lamp.png" alt="" id="lamp">
+    </section>
+
+    <div class="sec">
+        <h2>Happy Eid Mubarak</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel reprehenderit perferendis cum dolor, eius hic voluptates amet voluptate et fuga tempore dicta quia! Dolor error nobis ratione consequatur molestias placeat alias eligendi necessitatibus tempora exercitationem eaque ab nostrum quia cum velit aliquam, accusamus iure? Facilis fugit possimus ea repellendus id repudiandae enim cumque aperiam illo nisi recusandae aliquam non reiciendis illum, vel, cum odio nesciunt. Ea consectetur id a quas necessitatibus dolore delectus nulla iste cum. Voluptate, eos quisquam accusamus ex doloremque magnam. Incidunt dolorem sapiente quibusdam aliquam, consectetur ratione vero mollitia nemo unde eaque velit! Repellat, unde voluptatibus?</p>
+    </div>
+
+
+
+<script>
+        let stars = document.getElementById('stars');
+        let stars2 = document.getElementById('stars2');
+        let moon = document.getElementById('moon');
+        let rock = document.getElementById('rock');
+        let masjid = document.getElementById('masjid');
+        let text = document.getElementById('text');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value= window.scrollY;
+            stars.style.bottom=value * 0.05 + '% '; 
+            stars2.style.bottom=value * 0.025 + '% '; 
+            moon.style.bottom=value * -0.5 + 'px '; 
+            rock.style.bottom=value * -0.75 + 'px '; 
+            masjid.style.bottom=value * -0.15 + 'px '; 
+            text.style.right= -100 + value * 0.5 + '% '; 
+            text.style.top= 50 + value * 0.1 + '% '; 
+            header.style.top  = value * 0.5 + 'px';
+        })
+
+
+        const toggleMenu = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.onclick=function(){
+             toggleMenu.classList.toggle('active');
+             navigation.classList.toggle('active');
+
+        }
+    </script>
+</body>
+</html>
